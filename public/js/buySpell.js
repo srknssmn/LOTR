@@ -20,7 +20,7 @@ async function buySpellFunc(event) {
 
         const playerXP = await contract?.playerXP(signer.getAddress());
 
-        if (playerXP < 5) {
+        if (playerXP < 3) {
             await window.alert("insufficient xp!")
         }
 

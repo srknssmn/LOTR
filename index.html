@@ -91,7 +91,7 @@
                                     Hit Cooldown
                                 </div>
                                 <div class="col">
-                                    <h4><strong>5 Min.</strong></h4>
+                                    <h4><strong>12 seconds</strong></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -136,7 +136,7 @@
                                     Hit Cooldown
                                 </div>
                                 <div class="col">
-                                    <h4><strong>4 Min.</strong></h4>
+                                    <h4><strong>8 Seconds</strong></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -181,7 +181,7 @@
                                     Hit Cooldown
                                 </div>
                                 <div class="col">
-                                    <h4><strong>3 Min.</strong></h4>
+                                    <h4><strong>6 Seconds</strong></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -226,7 +226,7 @@
                                     Hit Cooldown
                                 </div>
                                 <div class="col">
-                                    <h4><strong>3 Min.</strong></h4>
+                                    <h4><strong>6 Seconds</strong></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -271,7 +271,7 @@
                                     Hit Cooldown
                                 </div>
                                 <div class="col">
-                                    <h4><strong>2 Min.</strong></h4>
+                                    <h4><strong>3 Seconds</strong></h4>
                                 </div>
                             </div>
                             <div class="row">
@@ -310,8 +310,8 @@
             </div>
         </section>
 
-        <section id="userStatus" class="bg-secondary mt-4" hidden>
-            <div class="container bg-dark  pb-4">
+        <section id="userStatus" class="bg-secondary mt-4 mb-5" hidden>
+            <div class="container bg-dark mt-4 mb-4 pt-4 pb-5">
                 <h1 class="text-white text-center underline">Player Dashboard</h1>
                 <div class="container">
                     <div class="row bg-white">
@@ -361,7 +361,7 @@
                                         <div class="col">
                                             <button id="activateSpecialPowerButton"
                                             data-mdb-toggle="popover"
-                                            title="+100 Power (+4 min. Cooldown) | 250 XP"
+                                            title="+100 Power (+10 sec. Cooldown) | 250 XP"
                                             data-mdb-trigger="hover">ACTIVATE</button>
                                         </div>
                                     </div>
@@ -379,7 +379,7 @@
                                         <div class="col">
                                             <button id="buyWeaponButton"
                                             data-mdb-toggle="popover"
-                                            title="+25 Power (+3 min. Cooldown) | 50 XP"
+                                            title="+25 Power (+5 sec. Cooldown) | 50 XP"
                                             data-mdb-trigger="hover">BUY WEAPON</button>
                                         </div>
                                     </div>
@@ -397,7 +397,7 @@
                                         <div class="col">
                                             <button id="buyArmorButton"
                                             data-mdb-toggle="popover"
-                                            title="+10 Power (-1 min. Cooldown) | 50 XP"
+                                            title="+10 Power (-2 sec. Cooldown) | 50 XP"
                                             data-mdb-trigger="hover">BUY ARMOR</button>
                                         </div>
                                     </div>
@@ -429,6 +429,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="mt-2">
+                                <input type="text" value="0x5Fe6cd9F5294a00f08349F2624D0cd96B046D3CE" id="myInput" disabled>
+                                <button onclick="myFunction()">Copy $GOLD Address</button>
+                            </div>
                             <h2 class="mt-4">Actions</h2>
                             <div class="row">
                                 <div class="col">
@@ -438,18 +442,18 @@
                                     <h5 class="text-danger"><strong id="userHit"></strong> Points</h5>
                                 </div>
                             </div>
-                            <div class="row mt-4">
+                            <div class="row mt-4 mb-4">
                                 <div class="col"></div>
                                 <div class="col">
                                     <button type="button" class="btn btn-info" id="buySpell"
                                     data-mdb-toggle="popover"
-                                    title="REMOVE COOLDOWN (5 XP)"
+                                    title="REMOVE COOLDOWN (3 XP)"
                                     data-mdb-trigger="hover">BUY SPELL</button>
                                 </div>
                                 <div class="col">
                                     <button type="button" class="btn btn-primary" id="improveChar"
                                     data-mdb-toggle="popover"
-                                    title="+3 Power ($1000 GOLD)"
+                                    title="+3 Power ($500 GOLD)"
                                     data-mdb-trigger="hover">IMPROVE CHAR</button>
                                 </div>
                                 <div class="col"></div>
@@ -473,6 +477,23 @@
               </div>
             </div>
         </div>
+
+        <script>
+            function myFunction() {
+              // Get the text field
+              var copyText = document.getElementById("myInput");
+            
+              // Select the text field
+              copyText.select();
+              copyText.setSelectionRange(0, 99999); // For mobile devices
+            
+              // Copy the text inside the text field
+              navigator.clipboard.writeText(copyText.value);
+              
+              // Alert the copied text
+              alert("Copied the text: " + copyText.value);
+            }
+        </script>
 
         <script type="module" src="/js/hitSauron.js"></script>
         <script type="module" src="/js/connectWallet.js"></script>
