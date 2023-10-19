@@ -15,6 +15,6 @@ export const sauronHealth = async () => {
     let totalLockedAmount2 = await totalLockedAmount1 * 1000;
     let totalLockedAmount3 = await Math.round(totalLockedAmount2)
     sauronHealthID.innerHTML = await totalLockedAmount3
-    let amount = await (1000000 - totalLockedAmount3) / 100000 * 100
+    let amount = await (1000000 - totalLockedAmount3) / 1000000 * 100
     sauronHealthP.style.width = `${amount}%`;
 };
