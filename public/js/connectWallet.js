@@ -4,7 +4,8 @@ document.querySelector("#connectWallet").addEventListener('click' , connectWalle
 async function connectWalletfunc() {
 
     if (!window.ethereum) {
-        console.log("MetaMask not installed; using read-only defaults")
+        window.alert("Install Metamask")
+        if(confirm("Metamask Download")) document.location = 'https://metamask.io/download/';
     }
     await verifyNetwork();
     
