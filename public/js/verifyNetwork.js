@@ -1,7 +1,7 @@
 export const verifyNetwork = async () => {
 
-    // Dymension Network Verifying
-    const dymensionRollupID = await '0x8A9E57';
+    // Sepolia Network Verifying
+    const dymensionRollupID = await '0x4E4E86';
     const chainId = await window.ethereum.request({
         method: 'eth_chainId',
       });
@@ -31,11 +31,11 @@ export const verifyNetwork = async () => {
                     await window.ethereum.request({
                         method: 'wallet_addEthereumChain',
                         params: [
-                        { chainId: '0x8A9E57', 
-                        chainName:'Coinhunterstrrollapp',
-                        rpcUrls:['https://froopyland.dymension.xyz/7/coinhunterstrrollapp_9084503-1/evmrpc'],
+                        { chainId: '0x4E4E86', 
+                        chainName:'CoinHuntersTR',
+                        rpcUrls:['https://froopyland.dymension.xyz/22/coinhunterstr_5131910-1-a/evmrpc'],
                         nativeCurrency: {
-                        symbol:'coin', // 2-6 characters long
+                        symbol:'CHTR', // 2-6 characters long
                     decimals: 18
                     }
                         
